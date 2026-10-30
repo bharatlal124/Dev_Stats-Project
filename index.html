@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DevStats | LeetCode & GitHub Tracker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <header class="app-header">
+            <h1>DevStats Dashboard</h1>
+            <div class="tab-controls">
+                <button class="tab-btn active" data-target="leetcode-view">LeetCode Stats</button>
+                <button class="tab-btn" data-target="github-view">GitHub Overview</button>
+            </div>
+        </header>
+
+        <!-- ================= LEETCODE TAB VIEW ================= -->
+        <section id="leetcode-view" class="tab-panel active">
+            <div class="search-box">
+                <input type="text" id="lc-input" placeholder="Enter LeetCode username...">
+                <button id="lc-search-btn">Search LeetCode</button>
+            </div>
+
+            <p id="lc-error" class="error-msg hidden"></p>
+
+            <div id="lc-dashboard" class="dashboard-content">
+                <div class="progress-row">
+                    <div class="easy-progress circle">
+                        <span id="easy-label">0/0</span>
+                        <p>Easy</p>
+                    </div>
+                    <div class="medium-progress circle">
+                        <span id="medium-label">0/0</span>
+                        <p>Medium</p>
+                    </div>
+                    <div class="hard-progress circle">
+                        <span id="hard-label">0/0</span>
+                        <p>Hard</p>
+                    </div>
+                </div>
+
+                <div id="lc-stats-cards" class="stats-cards"></div>
+            </div>
+        </section>
+
+        <!-- ================= GITHUB TAB VIEW ================= -->
+        <section id="github-view" class="tab-panel hidden">
+            <div class="search-box">
+                <input type="text" id="gh-input" placeholder="Enter GitHub username (e.g., torvalds)...">
+                <button id="gh-search-btn">Search GitHub</button>
+            </div>
+
+            <p id="gh-error" class="error-msg hidden"></p>
+
+            <div id="gh-dashboard" class="dashboard-content hidden">
+                <!-- Profile Header -->
+                <div class="profile-header">
+                    <img id="gh-avatar" src="" alt="User Avatar">
+                    <div class="profile-info">
+                        <div class="name-row">
+                            <h2 id="gh-name"></h2>
+                            <a id="gh-link" href="#" target="_blank">@username</a>
+                        </div>
+                        <p id="gh-bio" class="bio"></p>
+                        <div class="meta-info">
+                            <span id="gh-location"></span>
+                            <span id="gh-company"></span>
+                            <span id="gh-joined"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- GitHub Stat Cards -->
+                <div id="gh-stats-cards" class="stats-cards"></div>
+
+                <!-- 365-Day Heatmap & Recent Commit Days -->
+                <div class="panel-box">
+                    <div class="section-header">
+                        <h3>Last Year Contributions (<span id="gh-total-contrib">0</span>)</h3>
+                        <span class="hint">Hover over squares for daily counts</span>
+                    </div>
+                    <div id="gh-heatmap" class="heatmap"></div>
+
+                    <h4 class="sub-heading">Recent Active Commit Days</h4>
+                    <div id="gh-recent-commits" class="recent-commits"></div>
+                </div>
+
+                <!-- Top Repositories -->
+                <div class="panel-box">
+                    <h3>Top Repositories</h3>
+                    <div id="gh-repos" class="repos-grid"></div>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
