@@ -163,6 +163,7 @@ body {
     background: conic-gradient(#299f5d var(--progress-degree, 0%), #161b22 0%);
 }
 
+/* Progress bar variable for show circle fill with JS */
 .medium-progress.circle {
     border-color: #f39c12;
     background: conic-gradient(#f39c12 var(--progress-degree, 0%), #161b22 0%);

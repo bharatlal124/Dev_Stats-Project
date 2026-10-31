@@ -153,6 +153,7 @@ document.addEventListener("DOMContentLoaded", function () {
     lcInput.addEventListener("keydown", e => {
         if (e.key === "Enter") lcSearchBtn.click();
     });
+    
 
     // ================= 3. GITHUB MODULE =================
     const ghInput = document.getElementById("gh-input");
