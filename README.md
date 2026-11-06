@@ -6,6 +6,7 @@ A clean, responsive, single-page web dashboard that allows developers to search 
 
 ---
 
+
 ## ✨ Features
 
 - **Tabbed Interface:** Easily switch between LeetCode stats and GitHub overviews without losing context or reloading the page.
@@ -22,6 +23,7 @@ A clean, responsive, single-page web dashboard that allows developers to search 
 
 ---
 
+
 ## 🛠️ Tech Stack
 
 - **HTML5:** Semantic layout structure with modular panels.
@@ -33,6 +35,7 @@ A clean, responsive, single-page web dashboard that allows developers to search 
   - GitHub Contributions API: `https://github-contributions-api.jogruber.de/v4/${username}`
 
 ---
+
 
 ## 📁 Project Structure
 
